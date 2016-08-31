@@ -1,0 +1,1356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Jworks</title>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+	    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+	    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+	    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+	    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+	    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+	    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+	    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+	    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+	    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+	    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+	    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+	    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	    <link rel="manifest" href="/assets/favicon/manifest.json">
+	    <meta name="msapplication-TileColor" content="#ffffff">
+	    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+	    <meta name="theme-color" content="#ffffff">
+		<link rel="icon" href="/assets/favicon/favicon.ico">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/ordina.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	   <!--Add support for earlier versions of Internet Explorer -->
+	   <!--[if lt IE 9]>
+	   <script src="lib/js/html5shiv.js"></script>
+	   <![endif]-->
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Jworks</h1>
+					<h3>Kickstarters 2016</h3>
+					<img src="/assets/img/jworks-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+				</section>
+
+				<section>
+					<div class="row">
+                        <div class="col-xs-6">
+                            <h2>Hi, my name is Tim.</h2>
+                            <p>
+								CC-Lead: Automation & Tooling</br>
+								Developer<br/>
+                                Ordina Belgium<br/>
+                                @VeeTeeDev<br/>
+                                https://github.com/VeeTeeDev
+                            </p>
+                        </div>
+                        <div class="col-xs-6">
+                            <h2>Hi, my name is Michael.</h2>
+                            <p>
+								Gulp ninja<br/>
+								Developer<br/>
+                                Ordina Belgium<br/>
+                                @MikeVe<br/>
+                                https://github.com/MichaelOrdina
+                            </p>
+                        </div>
+	                    </div>
+            	</section>
+
+
+				<!-- PUT CONTECT HERE -->
+				<section>
+					<h2>Topics</h2>
+					<p>Introduction</p>
+					<p>Package Managers</p>
+					<p>Build Systems</p>
+					<p>Generators</p>
+					<p>E2E Testing</p>
+
+					<aside class="notes">
+						<p><strong>Introduction</strong>: Hi there.</p>
+						<p><strong>Package Managers</strong>: Another package manager? &hellip;</p>
+						<p><strong>Build Systems</strong>: What, Where, When, Buildsystems ?</p>
+						<p><strong>E2E Testing</strong>: End 2 End testing with protractor</p>
+					</aside>
+				</section>
+				<section>
+                	<section data-background="#DF6F0C">
+                    	<h2 style="color: #fff;">Introduction</h2>
+                	</section>
+					<section>
+                    <h2>Front 'End'?</h2>
+                    <ul>
+                        <li>More like: Front 'alive and kicking'!</li>
+                        <li>Frameworks from nothing to ...</li>
+                        <li>Biggest change: buildsystems</li>
+                        <li>Dev environments</li>
+                        <li>...</li>
+                    </ul>
+                    </section>
+				</section>
+
+				<section>
+                	<section data-background="#DF6F0C">
+                    	<h2 style="color: #fff;">Package managers</h2>
+                	</section>
+					<section>
+                        <h2>Examples</h2>
+	                    <ul>
+	                        <li>Lunix: apt-get, yum, ...</li>
+	                        <li>Mac osX: brew, ...</li>
+	                        <li>PHP: composer, ...</li>
+	                        <li>Python: pip, easy_install, ...</li>
+	                        <li>...</li>
+	                    </ul>
+	                </section>
+					<section>
+                        <h2>Front-end</h2>
+	                    <ul>
+	                        <li>Node: npm, bower</li>
+	                        <li>Node package manager (NPM)</li>
+	                        <li>Yes, npm install -g bower</li>
+	                        <li>...</li>
+	                    </ul>
+	                </section>
+					<section>
+						<h1>NODE</h1>
+						<img src="/assets/img/node-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+                        <h2>Node</h2>
+	                    <p>
+						  In software development, Node.js is an open-source,
+						  cross-platform runtime environment for developing server-side
+						   Web applications. Although Node.js is not a JavaScript framework,
+						   many of its basic modules are written in JavaScript,
+						   and developers can write new modules in JavaScript.
+						   The runtime environment interprets JavaScript using Google's V8 JavaScript engine.
+	                    </p>
+	                </section>
+					<section>
+                        <h2>Node</h2>
+						<ul>
+	                        <li>Event-driven architecture</li>
+	                        <li>Asynchronous I/O</li>
+	                        <li>Facilitated by the Linux Foundation's Collaborative Projects program</li>
+	                        <li>Corporate users of Node.js: Groupon, Netflix, PayPal, ...</li>
+						</ul>
+	                </section>
+					<section>
+                        <h2>NPM</h2>
+						<img src="/assets/img/npm-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+                        <h2>Npm specs</h2>
+	                    <ul>
+	                        <li>General node package manager</li>
+	                        <li>Multiple versions in tree possible</li>
+	                        <li>...</li>
+	                    </ul>
+	                </section>
+					<section>
+						<h2>Famous npm packages</h2>
+						<div class="row">
+							<div class="col-xs-3">
+								<img src="assets/img/grunt-logo.png" height="100px">
+							</div>
+							<div class="col-xs-3">
+								<img src="assets/img/gulp-logo.png" height="100px">
+							</div>
+							<div class="col-xs-3">
+								<img src="assets/img/browserify-logo.png" height="100px">
+							</div>
+						</div>
+					</section>
+					<section>
+                        <h2>NPM commands</h2>
+						<pre>
+$ npm install (--save  --save-dev -g)
+$ npm update
+$ npm init
+$ npm uninstall
+</pre>
+	                </section>
+					<section>
+						<h2>Bower</h2>
+						<img src="/assets/img/bower-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+                        <h2>Bower specs</h2>
+	                    <ul>
+	                        <li>Installed through npm (node package)</li>
+	                        <li>Only 1 dependency version in the tree</li>
+	                        <li>Special for the web</li>
+	                        <li>...</li>
+	                    </ul>
+	                </section>
+					<section>
+						<h2>Famous bower packages</h2>
+						<div class="row">
+							<div class="col-xs-3">
+								<img src="assets/img/angularjs-logo.png" height="100px">
+							</div>
+							<div class="col-xs-3">
+								<img src="assets/img/bootstrap-logo.png" height="100px">
+							</div>
+							<div class="col-xs-3">
+								<img src="assets/img/jquery-logo.gif" height="100px">
+							</div>
+							<div class="col-xs-3">
+								<img src="assets/img/d3-logo.png"  height="100px">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Bower commands</h2>
+						<pre>
+$ bower install (--save)
+$ bower update
+$ bower init
+$ bower uninstall
+</pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Time for a tutorial</h2>
+						<ul>
+							<li>NODE</li>
+							<li>NPM</li>
+							<li>BOWER</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-background="#DF6F0C">
+						<h2 style="color: #fff;">Build systems</h2>
+					</section>
+					<section>
+						<h2>Building you say?</h2>
+						<ul>
+							<li>Build</li>
+							<li>Serve</li>
+							<li>Generate</li>
+							<li>...</li>
+						</ul>
+						<p>Running scripting...!</p>
+					</section>
+
+					<!-- **********
+						GRUNT
+					********** -->
+
+
+					<section>
+						<h1>Grunt</h1>
+						<img src="assets/img/grunt-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+						<h2>Grunt</h2>
+						<h3>The javascript task runner</h3>
+						<p>Yes, it's a taskrunner. They all are...
+						In one word: automation. The less work you have to do when performing repetitive tasks like minification,
+						 compilation, unit testing, linting, etc, the easier your job becomes.
+						</p>
+					</section>
+					<section>
+						<h2>Grunt</h2>
+						<ul>
+							<li>Node app</li>
+							<li>Runs tasks defined in a js file</li>
+							<li>Tasks are plugged-in node apps</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Common actions</h2>
+<pre>
+$ grunt build
+$ grunt server   (serve)
+$ grunt test
+</pre>
+						<p>These 'actions' should get implemented by the user</p>
+					</section>
+					<section>
+						<h2>config example</h2>
+						<img src="assets/img/grunt-config-01.png" style="vertical-align: bottom;" width="70%"/>
+					</section>
+					<section>
+						<h2>Grunt</h2>
+						<p>
+							There is a downside. Grunt is doing a lot of I/O.
+							Each output of a task is written to disk.
+							The next task will read that output, do stuff, and write it back.
+						</p>
+						<p>Gulp to the rescue ?</p>
+					</section>
+
+					<!-- **********
+					    GULP
+					********** -->
+
+					<section>
+						<h1>Gulp</h1>
+						<img src="assets/img/gulp-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+						<h2>Gulp</h2>
+<pre>
+$ gulp build
+$ gulp server
+$ gulp test
+</pre>
+					</section>
+					<section>
+						<h2>Gulp</h2>
+						<ul>
+							<li>Chaining</li>
+							<li>Less I/O means faster...</li>
+							<li>...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>config example</h2>
+						<img src="assets/img/gulp-config-01.png" style="vertical-align: bottom;" width="70%"/>
+					</section>
+
+					<!-- **********
+					    Webpack
+					********** -->
+
+					<section>
+						<h1>Webpack</h1>
+						<img src="assets/img/webpack-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+						<h2>Webpack</h2>
+						<ul>
+	                        <li>Like Gulp or Grunt, but different</li>
+	                        <li>Does more with less</li>
+	                        <li>Fairly easy configuration</li>
+	                        <li>Bundles files</li>
+	                        <li>Uses JavaScript modules</li>
+	                        <li>Reduces the amount of (XHR) requests</li>
+	                    </ul>
+					</section>
+					<section>
+                    <h2>Basics</h2>
+<pre>
+$ npm install webpack -g
+$ webpack app.js bundle.js
+$ webpack app.js bundle.js --watch
+</pre>
+                </section>
+
+					<!-- **********
+					    Angular-cli
+					********** -->
+					<section>
+						<h1>Angular-cli</h1>
+						<img src="assets/img/angular-cli-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+						<h2>Angular-cli</h2>
+						<ul>
+							<li>Pushed by google for angular2</li>
+							<li>Based on ember-cli with broccoli</li>
+							<li>Building</li>
+							<li>Serving</li>
+							<li>Generator</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Angular-cli</h2>
+<pre>
+$ ng init
+$ ng build
+$ ng serve
+$ ng e2e
+$ ng ...
+</pre>
+					</section>
+					<section>
+						<h2>Angular-cli</h2>
+						<p>Cool but...
+						Changing back to webpack for dev environment because of performance issues on broccoli for dev-server.
+						Some feature that are available and very much appreciated by devs are not yet supported.
+						<ul>
+							<li>Autoreload for css !important</li>
+							<li>Speed for reloading</li>
+						</ul>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#DF6F0C">
+						<h2 style="color: #fff;">Generators</h2>
+					</section>
+					<section>
+						<h2>What is this?</h2>
+						<img src="/assets/img/angular-cli-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+						<img src="/assets/img/yeoman-logo.png" style="vertical-align: bottom;" width="22.5%"/>
+					</section>
+					<section>
+						<h2>Lazy devs</h2>
+						<p>
+							Yes we are lazy. So why don't we script stuff once to run it 100000 times. Why don't we automate ?
+							Euch!?! We do.
+							Ok, you're building a webapp and for the 12th time, you need to build a new component. What do you do?
+							Copy and paste a component. Refactor... and run into bugs because of refactoring.
+						</p>
+					</section>
+					<section>
+						<h2>Yeoman</h2>
+						<p>
+							Yeoman is generator solution for WEB SCAFFOLDING. Generators based on this principle let the user create a webapp from scratch in one command line action.
+							A whole webapp struture gets created. There are already more than thousands different yeoman generators.
+							But there is more. Some project provide component generators as well.
+						</p>
+						<h4>You need a new component</h2>
+<pre>
+$ xxx generate xxx-component
+</pre>
+					</section>
+					<section>
+						<h2>Angular-cli: CLI tool for Angular2</h2>
+<pre>
+$ ng new {{myWebApp}}
+$ ng serve
+$ ng generate component my-new-component
+$ ng g service my-new-service
+$ ng g interface my-new-interface
+</pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#DF6F0C">
+						<h2 style="color: #fff;">Tutorial time</h2>
+						<h3>Angular-cli</h3>
+					</section>
+					<section>
+						<h3>Initialize new app</h3>
+<pre>
+$ mkdir kickstarter-ng-cli
+$ cd kickstarter-ng-cli
+$ ng new kickstarter-ng-cli
+$ ng serve
+</pre>
+					</section>
+					<section>
+					<h3>Generate new stuff</h3>
+<pre>
+$ ng generate component my-new-component
+$ ng g service my-new-service
+$ ng g interface my-new-interface
+</pre>
+				</section>
+			</section>
+
+
+
+
+			<section>
+				<section>
+					<h2>Gulp</h2>
+					<img src="img/gulp-logo.png" height="250px">
+				</section>
+				<section>
+					<h2>What is gulp?</h2>
+					<ul>
+						<li class="fragment" data-fragment-index="0">Automation - gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.</li>
+						<li class="fragment" data-fragment-index="1">Platform-agnostic - Integrations are built into all major IDEs and people are using gulp with PHP, .NET, Node.js, Java, and other platforms.</li>
+						<li class="fragment" data-fragment-index="2">Strong Ecosystem - Use npm modules to do anything you want + over 2000 curated plugins for streaming file transformations</li>
+						<li class="fragment" data-fragment-index="3">Simple - By providing only a minimal API surface, gulp is easy to learn and simple to use</li>
+					</ul>
+				</section>
+				<section>
+					<h2>What else is there besides writing code?</h2>
+					<ul>
+						<li>Minification</li>
+						<li>Concatination</li>
+						<li>Vendor Prefixes</li>
+						<li>Compilation: Sass, Typescript, Less, etc.</li>
+						<li>Optimising 3rd party code</li>
+						<li>Testing</li>
+						<li>Code analysis</li>
+						<li>Serving your project locally</li>
+						<li>Building your project</li>
+						<li>...</li>
+					</ul>
+				</section>
+					<section>
+						<h2>How does it work?</h2>
+						<ol>
+							<li>Create a <strong>gulpfile</strong> where you define gulp <strong>tasks</strong>.</li>
+							<li>Create and configure tasks.</li>
+							<li>Run the gulp tasks from the <strong>command line</strong>.</li>
+							<li>Let gulp do it's magic...</li>
+						</ol>
+					</section>
+					<section>
+						<img src="http://www.codeproject.com/KB/Nodejs/1064203/b65be634-9e8e-11e5-970d-f3f304641a14.png" width="800px">
+					</section>
+					<section>
+						<h2>Example</h2>
+						<h3>compiling a Sass file with gulp</h3>
+					</section>
+					<section>
+						<h2>First things first</h2>
+						<h3>Installing gulp and other requirements</h3>
+						<p>Global command line interface</p>
+						<pre>npm install -g gulp-cli</pre>
+						<p>Local instance</p>
+						<pre>npm init && npm install gulp --save-dev</pre>
+						<p>After installing create a gulpfile.js in your project's root directory <small>(same as package.json)</small></p>
+					</section>
+					<section>
+						<h2>Sass</h2>
+						<h3>Installing a sass compiler for gulp</h3>
+						<p>Global sass compiler</p>
+						<pre>npm install -g sass</pre>
+						<p>Gulp sass</p>
+						<pre>npm install gulp-sass --save-dev</pre>
+						<small><a target="_blank" href="https://www.npmjs.com/package/gulp-sass">https://www.npmjs.com/package/gulp-sass</a></small>
+						<h3>Including it in our gulpfile</h3>
+						<pre>
+var gulp = require('gulp'),
+gulpSass = require('gulp-sass');
+						</pre>
+					</section>
+					<section>
+						<h2>Create a gulp task in the gulpfile(.js)</h2>
+						<p>Let's create our first gulp task and name it 'styles'</p>
+						<pre>
+gulp.task('styles', function(){
+log('Compiling Sass -> Css');
+return gulp
+	.src(./src/assets/styles/main.scss)
+	.pipe(gulpSass({outputStyle: 'compressed'}))
+	.on('error', gulpSass.logError)
+	.pipe(gulp.dest('./app/assets/styles/');
+});
+						</pre>
+					</section>
+					<section>
+						<h2>Let me walk you trough that</h2>
+						<pre>gulp.task('styles', function(){ //some awesome gulp stuff... });</pre>
+						<p>First we create a new gulp task. The <i>gulp.task()</i> function takes in 2 parameters, a <u>string</u> which is the name of the task (and also the argument to be entered at the command line), and a <u>function</u> that contains the task.
+						</p>
+					</section>
+					<section>
+						<h2>Let me walk you trough that</h2>
+						<pre>gulp.task('styles', function(){
+	<span style="color: red;">    log('Compiling Sass -> Css');</span>
+	<span style="color: orange;">    return gulp
+		.src(./src/assets/styles/main.scss)</span>
+	<span style="color: gray;">        .pipe(gulpSass({outputStyle: 'compressed'}))
+		.on('error', gulpSass.logError)
+		.pipe(gulp.dest('./app/assets/styles/');<span>
+	});</pre>
+						<p>In our gulp task we address a source file by using the gulp.src() function
+							<ul>
+								<li>It takes a string or a string[] as parameter.</li>
+								<li>the string is the location of the file to be processed.</li>
+								<li>If multiple files need to be processed, you pass an array of strings.</li>
+								<li>Patterns like <i>./**/*.scss</i> are also accepted</li>
+							<ul>
+						</p>
+						 <small> <small style="color: red;">Note that in this case 'log' is another function in the gulpfile that logs the passed string to the terminal. (not shown in this example since this is another gulp plugin that we need to install)</small></small>
+					</section>
+					<section>
+						<h2>Let me walk you trough that</h2>
+						<pre>gulp.task('styles', function(){
+	<span style="color: gray;">    log('Compiling Sass -> Css');</span>
+	<span style="color: gray;">    return gulp
+		.src(./src/assets/styles/main.scss)</span>
+	<span style="color: orange;">        .pipe(gulpSass({outputStyle: 'compressed'}))</span>
+	<span style="color: gray;">        .on('error', gulpSass.logError)</span>
+		.pipe(gulp.dest('./app/assets/styles/');</span>
+	});</pre>
+						<ul>
+							<li>Now that we have gathered our files to be processed, we can process them with our gulp plugin. <small>(in this case gulp-sass)</small></li>
+							<ul>
+								<li>We 'pipe' the files trough the processor with the .pipe function,
+									this function gets the returned files from the previous (.src) function.</li>
+								<li>The pipe function takes a function, in this case gulpSass(), as parameter,</li>
+								<li>gulpSass() takes an object as parameter, these are settings for configuring the compiler.</li>
+							</ul>
+						</ul>
+						<small>For more info on gulp-sass options: <a target="_blank" href="https://www.npmjs.com/package/gulp-sass">https://www.npmjs.com/package/gulp-sass</a></small>
+
+					</section>
+					<section>
+						<h2>Let me walk you trough that</h2>
+						<pre>gulp.task('styles', function(){
+	<span style="color: gray;">    log('Compiling Sass -> Css');</span>
+	<span style="color: gray;">    return gulp
+	.src(./src/assets/styles/main.scss)</span>
+	<span style="color: gray;">        .pipe(gulpSass({outputStyle: 'compressed'}))</span>
+	<span style="color: orange;">        .on('error', gulpSass.logError)</span>
+	.pipe(gulp.dest('./app/assets/styles/');</span>
+	});</pre>
+						<ul>
+							<li>Gulp can also listen for events <small>(in this case the 'error' event)</small></li>
+						</ul>
+						<p style="text-align: left;">
+							The .on function is the next step in our example stream, so if the previous functions have triggered the 'error' event, you can specify a callback to be executed if this event has been triggered.
+							In this case if an 'error' event has been triggered we execute the logError function that comes with gulp-sass.
+						</p>
+						<small>For more info on gulp-sass options: <a target="_blank" href="https://www.npmjs.com/package/gulp-sass">https://www.npmjs.com/package/gulp-sass</a></small>
+
+					</section>
+					<section>
+						<h2>Let me walk you trough that</h2>
+						<pre>gulp.task('styles', function(){
+	<span style="color: gray;">    log('Compiling Sass -> Css');</span>
+	<span style="color: gray;">    return gulp
+		.src(./src/assets/styles/main.scss)</span>
+	<span style="color: gray;">        .pipe(gulpSass({outputStyle: 'compressed'}))</span>
+	<span style="color: gray;">        .on('error', gulpSass.logError)</span>
+	<span style="color: orange;">	.pipe(gulp.dest('./app/assets/styles/');</span>
+	});</pre>
+						<p style="text-align: left;">
+							Once we have done all the steps we want to do in this task, we pipe the results to another function, namely gulp.dest().
+							gulp.dest() takes in a string as parameter and should be the path to the destination folder.
+						</p>
+						<p style="text-align: left;"><small>
+							Note: not all tasks have a gulp.dest(), for example a typescript linter takes in some source files, then produces output to the console to show the errors. But then the stream ends without writing any files.
+						</small></p>
+					</section>
+				</section>
+				<section>
+					<section id="inDepth">
+						<h2>In Depth</h2>
+						<p>Let's take an in depth look at some examples to add to your project<p>
+							<p><small>Note: keep in mind these are my personal preferences of gulp plugin's to use for the tasks, they might not always be the only option!</small><p>
+					</section>
+					<section>
+						<h2>Overview</h2>
+						<p><ul>
+							<li>Constant replace</li>
+							<li>typescript styling</li>
+							<li>typescript naar js</li>
+							<li>sass naar css + minify</li>
+							<li>build html</li>
+							<li>imagemin</li>
+							<li>copy static resources</li>
+							<li>eventueel 3th party libs -> wiredep</li>
+							<li>vendor bower component -> caching</li>
+							<li>Dev-servers</li>
+							<li>live reload</li>
+						</ul><p>
+					</section>
+					<section>
+						<h2>Constant replacement</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Depending on which environment we are working in, we might want to use different variables (constants).<br>
+						i.e. switching the backend baseurl between localhost:PORT to http://someapi.com for our services.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+						    gulp-replace
+						</p>
+						<pre>npm install --save-dev gulp-replace</pre>
+						<a href="https://www.npmjs.com/package/gulp-replace">https://www.npmjs.com/package/gulp-replace</a>
+					</section>
+					<section>
+						<p class="text-left">For the current example we are going to use some additional plugins:
+							<ul>
+								<li>
+									gulp-if (conditionally execute pipe)<br>
+									<pre>npm install --save-dev gulp-if</pre>
+									<a href="https://www.npmjs.com/package/gulp-if">https://www.npmjs.com/package/gulp-if</a>
+								</li>
+								<li>
+									yargs (command line arguments)<br>
+									<pre>npm install --save-dev yargs</pre>
+									<a href="https://www.npmjs.com/package/yargs">https://www.npmjs.com/package/yargs</a>
+								</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Constant replacement implementation</h2>
+						<pre>
+	var gulp = require('gulp'),
+		args = require('yargs').argv,
+		$ = require('gulp-load-plugins')({
+			lazy: true
+		});
+
+	gulp.task('constants', ()=>{
+		return gulp
+			.src('./src/constants.js')
+			.pipe($.if(!args.dev, $.replace(/\'http.*\'/g, '\'http://someapi.com\'')))
+			.pipe($.if(args.dev, $.replace(/\'http.*\'/g, '\'http://localhost:3000\'')))
+			.pipe(gulp.dest('./src/'));
+	});
+						</pre>
+					</section>
+					<section>
+						<h2>Typescript Lint</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">To analyse your code quality of your project and make sure you use the same code style and it checks TypeScript code for most common mistakes and discrepancies without running the application.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+						    gulp-tslint<br>
+							tslint
+						</p>
+						<pre>npm install --save-dev tslint gulp-tslint</pre>
+						<a href="https://www.npmjs.com/package/gulp-tslint">https://www.npmjs.com/package/gulp-tslint</a>
+					</section>
+					<section>
+						<h2>TS Lint implementation</h2>
+						<pre>
+	gulp.task('lint', function () {
+		return gulp.src(['./src/*.ts','./src/**/*.ts'])
+		    <span class="text-muted">//add the option to use --verbose in cl to log all checked files</span>
+			.pipe($.if(args.verbose, $.print()))
+			.pipe($.tslint({
+				formatter: 'prose',
+				configuration: {
+					'rules': { <span class="text-muted">//rules go here, optionally you can use a tslint.json file</span> }
+				}
+			}));
+	});</pre>
+					</section>
+					<section>
+						<h2>Typescript Compile</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Compiling your typescript files to js for the browser to load.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+						    gulp-typescript
+							typescript (-g)
+						</p>
+						<pre>npm install --save-dev gulp-typescript</pre>
+						<a href="https://www.npmjs.com/package/gulp-typescript">https://www.npmjs.com/package/gulp-typescript</a>
+						<pre>npm install -g typescript</pre>
+					</section>
+					<section>
+						<h2>Cleaning old scripts</h2>
+						<p>Before we start compiling our typescript files, we need to make sure that we remove our old javascript files before every compile</p>
+	<pre>var del = require('del'); <span class="text-muted">// used for removing files</span>
+	// our function takes a path so that we can also reuse it for cleaning other file types
+	function clean(path, next) {
+		// Log the current path to remove
+		log($.util.colors.gray('Cleaning: ' + path));
+		del(path)
+			.then(function () {
+				// execute callback for gulp-stream
+				next();
+			});
+	}</pre>
+	<pre>gulp.task('clean-js', function (cb) {
+		clean(config.local + '**/*.js', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Compiling typescript</h2>
+	<pre>gulp.task('typescript-compile', function () {
+		return gulp.src(['./src/**/*.ts']])
+			.pipe($.typescript({
+				removeComments: true,
+				declaration: true,
+				noExternalResolve: false
+			}))
+			.pipe(gulp.dest('./local/'));
+	});</pre>
+					</section>
+					<section>
+						<h2>Running typescript sequence</h2>
+						<p>Now that we have our clean task and compilation task, we can create a simple alias task that runs both tasks in sequence.</p>
+	<pre>gulp.task('scripts', function (cb) {
+		// with args we can create an extra option for our typescripts to be linted
+		   with the previously created tslint task if we add -lint to the console
+		if (args.lint){
+			$.runSequence('tslint', 'clean-js', 'typescript-compile', cb);
+		} else {
+			$.runSequence('clean-js', 'typescript-compile', cb);
+		}
+	});</pre>
+					</section>
+					<section>
+						<h2>Sass Compile</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Compiling your Sass files to css for the browser to load.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+						    gulp-sass
+							sass (-g)
+						</p>
+						<pre>npm install --save-dev gulp-sass</pre>
+						<a href="https://www.npmjs.com/package/gulp-sass">https://www.npmjs.com/package/gulp-sass</a>
+						<pre>npm install -g sass</pre>
+					</section>
+					<section>
+						<h2>Cleaning old styles</h2>
+						<p>Just like with typescript, we can reuse our clean function and create a task that cleans all the old css files first.</p>
+	<pre>gulp.task('clean-styles', function (cb) {
+		clean(config.local + '**/*<span class="text-warning">.css</span>', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Compiling sass</h2>
+	<pre>gulp.task('sass-compile', function () {
+		return gulp.src('./src/**/*.scss')
+		.pipe($.plumber())
+		.pipe($.sass())
+		.on('error', $.sass.logError)
+		.pipe(gulp.dest('./local/'));
+	});</pre>
+					</section>
+					<section>
+						<h2>Running Styles sequence</h2>
+						<p>Now that we have our clean and compile task we can once again create a sequence task to run both.</p>
+	<pre>gulp.task('styles', function (cb) {
+			$.runSequence('clean-styles', 'sass-compile', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Jade Compile</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Compiling your Jade files to html for the browser to load.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+							gulp-jade
+						</p>
+						<pre>npm install --save-dev gulp-jade</pre>
+						<a href="https://www.npmjs.com/package/gulp-jade">https://www.npmjs.com/package/gulp-jade</a>
+					</section>
+					<section>
+						<h2>Cleaning old markup</h2>
+						<p>Once again, we clean out our old files, in this case html. (I'ts starting to get clear why we created a clean function now, doesn't it?)</p>
+	<pre>gulp.task('clean-markup', function (cb) {
+		clean(config.local + '**/*<span class="text-warning">.html</span>', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Compiling Jade</h2>
+	<pre>gulp.task('jade-compile', function () {
+		return gulp.src('./src/**/*.jade')
+		.pipe($.plumber())
+		.pipe($.jade())
+		.pipe(gulp.dest('./local/'));
+	});</pre>
+					</section>
+					<section>
+						<h2>Running Markup sequence</h2>
+						<p>And just like both our typescript and sass tasks, we create a sequence to clean up and compile.</p>
+	<pre>gulp.task('styles', function (cb) {
+			$.runSequence('clean-markup', 'jade-compile', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Imagemin</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Minify PNG, JPEG, GIF and SVG images, for optimal loading performance.</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+							gulp-imagemin
+						</p>
+						<pre>npm install --save-dev gulp-imagemin</pre>
+						<a href="https://www.npmjs.com/package/gulp-imagemin">https://www.npmjs.com/package/gulp-imagemin</a>
+					</section>
+					<section>
+						<h2>Cleaning old images</h2>
+	<pre>gulp.task('image-clean', function(cb){
+		<span class="text-muted">// this time we give an array to our clean function</span>
+		clean(['./local/assets/images/**/*.png','./local/assets/images/**/*.gif','./local/assets/images/**/*.jpg'], cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Compressing Images</h2>
+	<pre>gulp.task('images-compress', function(){
+		return gulp
+			.src(config.images.src)
+			.pipe($.plumber())
+			.pipe($.imagemin())
+			.pipe(gulp.dest(config.images.localDest));
+	});</pre>
+					</section>
+					<section>
+						<h2>Running Imagemin sequence</h2>
+	<pre>gulp.task('imagemin', function (cb) {
+			$.runSequence('image-clean', 'images-compress', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>Copying static files</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Simply copy all files that need no editing or compiling from src.
+							<ul>
+								<li>favicon</li>
+								<li>fonts</li>
+								<li>pdf</li>
+								<li>html (when not using jade or any other html engine)</li>
+								<li>...</li>
+							</ul>
+						</p>
+						<h4 class="text-left">Gulp Plugin:</h4>
+						<p class="text-left">
+							None
+							<br>
+							<small>Gulp simply takes the files from our source and pipes (copies) them to the destination.</small>
+						</p>
+					</section>
+					<section>
+						<h2>Copy Statics</h2>
+	<pre>gulp.task('dev-statics-copy', function(){
+		return gulp
+			.src(['./src/favicon.ico', './src/**/*.ttf'])
+			.pipe(gulp.dest(config.local));
+	});</pre>
+						<p class="text-left">
+							<small>
+								Also for static files we create a clean task and a task for running them in sequence. <br>
+								Same way we did in the previous examples
+							</small>
+						</p>
+					</section>
+					<section>
+						<h2>One more step</h2>
+						<p class="text-left">
+							Now that we have processed all our resources, there is one more step before we can serve our project.
+						</p>
+						<img src="img/one-more-thing.gif" height="300px" />
+					</section>
+					<section>
+						<h2>Injecting our CSS &amp; Javascript</h2>
+						<h4 class="text-left">Why?</h4>
+						<p class="text-left">Automatically link our javascript and css in our index.html file.
+							This keeps our index file always up to date, it uses our bower.json file for 3rd-party libraries and gulp inject for our project files.
+						</p>
+						<h4 class="text-left">Plugins:</h4>
+						<p class="text-left">
+							wiredep<br>
+							gulp-inject<br>
+						</p>
+						<pre>npm install --save-dev wiredep gulp-inject</pre>
+						<a href="https://www.npmjs.com/package/wiredep">https://www.npmjs.com/package/wiredep</a>
+						<a href="https://www.npmjs.com/package/gulp-inject">https://www.npmjs.com/package/gulp-inject</a>
+					</section>
+					<section>
+						<h2>Preparing index.html</h2>
+						<p class="text-left">
+							To tell wiredep and inject where our files should be placed, we need to add some comments to our hmtl file.
+							Since in our example we are using jade, we will add it to our index.jade file, so that on every compilation we get a clean file.
+						</p>
+						<div class="row">
+							<div class="col-xs-6">
+								<h4>HTML</h4>
+								<pre>&lt;html&gt;
+	&lt;head&lt;
+	  &lt;!-- bower:css --&gt;
+	  &lt;!-- endbower --&gt;
+	  &lt;!-- inject:css --&gt;
+	  &lt;!-- endinject --&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	  &lt;!-- bower:js --&gt;
+	  &lt;!-- endbower --&gt;
+	  &lt;!-- inject:js --&gt;
+	  &lt;!-- endinject --&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;</pre>
+							</div>
+							<div class="col-xs-6">
+								<h4>Jade</h4>
+	<pre>
+	html
+		head
+			// bower:css
+			// endbower
+			// inject:css
+			// endinject
+		body
+			// bower:js
+			// endbower
+			// inject:js
+			// endinject
+	</pre>
+							</div>
+						</div>
+
+					</section>
+					<section>
+						<h2>Wiredep</h2>
+						<p class="text-left">Wiredep is used to read our bower.json file and inject the installed libraries in the index.html between the bower and endbower comments.</p>
+						<small class="text-left">Note that the order our bower.json dependencies matter!<br> (for example, make sure you have jquery before angular, since it needs to be loaded first)</small>
+						<pre> "dependencies": {
+		"jquery": "^2.2.3",
+		"angular": "^1.5.3",
+		"font-awesome": "^4.5.0"
+	}</pre>
+					</section>
+					<section>
+						<h2>Load wiredep</h2>
+						<p>Since wiredep is not a gulp plugin, we cannot load it with $, and since we are using gulp, we use wiredep's stream</p>
+						<pre>var wiredep = require('wiredep').stream</pre>
+					</section>
+					<section>
+						<h2>Task + Configuration</h2>
+						<div class="row">
+							<div class="col-xs-12">
+								<h4>Task</h4>
+						<pre>gulp.task('dev-injector', function () {
+		return gulp
+			.src('./local/index.html')
+			.pipe(wiredep(config.getWiredepDefaultOptions()))
+			.pipe(gulp.dest('./local/'));
+	});</pre></div>
+						<div class="col-xs-12">
+							<h4>Configuration</h4>
+							<pre>config.getWiredepDefaultOptions = function () {
+	    var options = {
+		        bowerJson: require('./bower.json'),
+		        directory: './bower_components',
+		        ignorePath: '..'
+		}
+
+		return options;
+	};</pre></div>
+	</div>
+					</section>
+					<section>
+						<h2>Gulp Inject</h2>
+						<p class="text-left">gulp-inject is used to inject our project files (js &amp; css) into our index.hml</p>
+						<small class="text-left">Here too, order matters!<br>
+							for example in our angular project, we load our main app file first, then modules, then all the others.
+						</small>
+						<pre>js: {
+		all: [
+			local + 'app.js', // main
+			local + '*.js', // config, constants
+			local + '**/*.module.js', // dependency modules
+			local + '**/*.js'
+		]
+	}</pre>
+					</section>
+					<section>
+						<h2>Adding inject to the stream</h2>
+						<pre><span class="text-muted">gulp.task('dev-injector', function () {
+		return gulp
+			.src('./local/index.html')
+			.pipe(wiredep(config.getWiredepDefaultOptions()))</span>
+			<span class="text-success">
+			.pipe($.inject(
+				gulp.src(
+					config.js.all, {
+						read: false
+					}), {
+					relative: true
+				}))
+			.pipe($.inject(
+				gulp.src(
+					<span class="text-muted">// single file, since our sass compiles everything to main.css</span>
+					'./local/assets/main.css', {
+						read: false
+					}), {
+					relative: true
+				}))</span>
+				<span class="text-muted">
+			.pipe(gulp.dest('./local/'));</span>
+	});</pre>
+					</section>
+					<section>
+						<h2>The result</h2>
+						<pre>
+	&lt;!-- bower:css--&gt;
+		&lt;link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" /&gt;
+	&lt;!-- endbower--&gt;
+	&lt;!-- inject:css--&gt;
+		&lt;link rel="stylesheet" href="assets/main.css"&gt;
+	&lt;!-- endinject--&gt;
+
+	&lt;!-- bower:js--&gt;
+		&lt;script src="/bower_components/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+		&lt;script src="/bower_components/angular/angular.js"&gt;&lt;/script&gt;
+	&lt;!-- endbower--&gt;
+	&lt;!-- inject:js--&gt;
+		&lt;script src="app.js"&gt;&lt;/script&gt;
+		&lt;script src="home/home.module.js"&gt;&lt;/script&gt;
+		&lt;script src="home/home.controller.js"&gt;&lt;/script&gt;
+	&lt;!-- endinject--&gt;
+	</pre>
+					</section>
+					<section>
+						<h2>Ready to serve</h2>
+						<p>
+							Phew, that was a lot of tasks,
+							now that we have all our resources, and injected them in our html.
+							Lets finally serve them to our browser.
+						</p>
+					</section>
+				</section>
+
+				<section id="serve">
+					<section>
+						<h2>Serving + Live Reload</h2>
+					</section>
+					<section>
+						<h2>Final DEV Build</h2>
+						<p>Before we start serving, lets create a sequence task to build our complete package for local serving.</p>
+						<pre>gulp.task('dev-package', function(cb){
+		$.runSequence(['dev-styles', 'dev-scripts', 'dev-markup', 'dev-imagemin', 'dev-statics'], 'dev-injector', cb);
+	});</pre>
+					</section>
+					<section>
+						<h2>BrowserSync </h2>
+						<p>BrowserSync is the plugin that we are going to use to autoreload our browsers when working on our project.</p>
+						<pre>npm install --save-dev browser-sync</pre>
+						<p>Lets add it to our gulpfile, since it is not a gulp-plugin.</p>
+						<pre>var browserSync = require('browser-sync');</pre>
+					</section>
+					<section>
+						<h2>BrowserSync Function</h2>
+						<p>Let's set up our BrowserSync</p>
+						<pre style="max-height: 400px;">function startBrowserSync(isDev) {
+		<span class="text-muted">// return if browserSync is allready running</span>
+		if (browserSync.active) {
+			return;
+		}
+		<span class="text-muted">// watch on files for reloading</span>
+		if(isDev){
+			gulp.watch(config.src + '**/*.scss', ['dev-styles']);
+			gulp.watch(config.src + '**/*.ts', ['dev-scripts']);
+			gulp.watch(config.src + '**/*.jade', ['dev-markup']);
+		}
+		var options = {
+			<span class="text-muted">// server port</span>
+			proxy: 'localhost:7001',
+			<span class="text-muted">// project port, for browser load</span>
+			port: 9010,
+			<span class="text-muted">// files to watch, browser will reload on change.</span>
+			files: ['./local/**/*.*'],
+			ghostMode: {
+				clicks: true,
+				location: false,
+				forms: true,
+				scroll: true
+			},
+			injectChanges: true,
+			logFileChanges: true,
+			logLevel: 'debug',
+			logPrefix: 'BrowserSync',
+			notify: true,
+			<span class="text-muted">// wait for tasks to complete before reloading.</span>
+			reloadDelay: 5000
+		};
+		<span class="text-muted">// start browserSync, giving it the above options.</span>
+		browserSync(options);
+	}</pre>
+				</section>
+
+				<section>
+					<h2>Serve Function</h2>
+					<p>In our project I have included a node server that is set up to run a project with the current setup. Let's create a function to link it with our browserSync.</p>
+				</section>
+				<section>
+					<h2>Nodemon</h2>
+					<p>To watch for server events, we are going to use gulp-nodemon, nodemon is a node watcher that gives us access to server events like restart, start, crash, exit, ...<br>
+					<pre>npm install --save-dev gulp-nodemon</pre>
+				</section>
+				<section>
+					<h2>Server events</h2>
+					<pre style="max-height: 400px;">function serve(isDev) {
+	var nodeOptions = {
+		script: './gulpfile.server.js',
+		watch: './gulpfile.server.js',
+		delayTime: 5000,
+		env: {
+			<span class="text-muted">// port = browserSync proxy</span>
+			'PORT': 7001,
+			'NODE_ENV': isDev ? 'dev' : 'build'
+		}
+	};
+	<span class="text-muted">// run nodemon to start our server</span>
+	return $.nodemon(nodeOptions)
+		<span class="text-muted">// reload browser sync if the server itself restarts</span>
+		.on('restart', function (evt) {
+			log('*** nodemon restarted ***');
+			log('Files Changed on restart: ' + evt);
+			setTimeout(function () {
+				browserSync.notify('Reloading BrowserSync...');
+				browserSync.reload({
+					stream: false
+				});
+			}, 1000);
+		})
+		<span class="text-muted">// once our server starts, browserSync starts as well</span>
+		.on('start', function () {
+			$.util.log($.util.colors.green('*** nodemon started ***'));
+			startBrowserSync(isDev);
+		})
+		<span class="text-muted">// terminal loggin on crash and exit</span>
+		.on('crash', function () {
+			$.util.log($.util.colors.red('*** nodemon crashed ***'));
+			$.util.log($.util.colors.yellow('check errors for more information'));
+			$.util.log($.util.colors.yellow('nodemon will attempt to restart automaticaly when server file is changed.'));
+		})
+		.on('exit', function () {
+			$.util.log($.util.colors.blue('*** nodemon exited cleanly ***'));
+		});
+	}</pre>
+				</section>
+				<section>
+					<h2>Linking our tasks to browserSync</h2>
+					<p>
+						BrowserSync currently has no idea when our tasks are finished, therefore we will add some additional pipes to our tasks for the files that we are 'watching' on: 'dev-typescript-compile', 'dev-styles-compile' and 'dev-markup-compile'.
+					</p>
+					<h5>Simply add the following code</h5>
+					<pre>.pipe(browserSync.stream());</pre>
+					<h5>after</h5>
+					<pre>.pipe(gulp.dest(config.local))</pre>
+				</section>
+				<section>
+					<h2>Serve sequence</h2>
+					<p>
+						Now that we have our server set up, let's create a sequence to run it as a task.
+					</p>
+					<pre>gulp.task('serve', function (cb) {
+		<span class="text-muted">// serve builds our package, then serves our project by the server task.</span>
+		$.runSequence('dev-package','server', cb);
+	});
+	gulp.task('server', function(){
+		serve(true);
+	});
+					</pre>
+				</section>
+			</section>
+
+
+
+			<section>
+				<section data-background="#DF6F0C">
+					<h2 style="color: #fff;">E2E Testing</h2>
+				</section>
+				<section>
+					<h2>What is E2E testing</h2>
+					<p>Let's say we have an applicaton with a main view. This main view has a simple contact list.
+						Clicking on a contact makes the user navigate to a detail page. On the detail page we have a button to go back, or to go to an edit page. Easy? yes.
+						Now, before we can release a new version of our application, we need to test for regression.
+						We hire someone that navigates to our UI, clicks some links and check the outcome. forEach('release'); ?
+						Who wants to do this ?
+					</p>
+					<p>
+						Yes we automate!
+					</p>
+				</section>
+				<section>
+					<h2>E2E testing</h2>
+					<p>As applications grow in size and complexity,
+						 it becomes unrealistic to rely on manual testing to verify the correctness of new features,
+						 catch bugs and notice regressions.
+						 Unit tests are the first line of defense for catching bugs,
+						 but sometimes issues come up with integration between components which can't be captured in a unit test.
+						 End-to-end tests are made to find these problems.(Angular Docs)
+					</p>
+				</section>
+				<section>
+				</section>
+				<section>
+					<h2>What is Codecoverage ?</h2>
+					<p>
+						Tools like Istambul provide us with a way to check how many lines of are coded are getting tested.
+					</p>
+				</section>
+
+			</section>
+
+
+				<section style="text-align: left;">
+                	<h2>Regards Jworks!</h2>
+                	<p class="fragment">Try not to get lost...!</p>
+	            </section>
+				<section style="text-align: left;" data-background="assets/img/jworks-wallpaper-3.jpg">
+	                <h2>&nbsp;</h2>
+	            </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+            	center: true,
+            	dependencies: [
+	                // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+	                {
+	                    src: 'lib/js/classList.js',
+	                    condition: function () {
+	                        return !document.body.classList;
+	                    }
+	                },
+	                // Interpret Markdown in <section> elements
+					// { src: 'plugin/markdown/marked.js' },
+	                {
+	                    src: 'plugin/markdown/marked.js',
+	                    condition: function() {
+	                        return !!document.querySelector( '[data-markdown]' );
+	                    }
+	                },
+					// { src: 'plugin/markdown/markdown.js' },
+	                {
+	                    src: 'plugin/markdown/markdown.js',
+	                    condition: function() {
+	                        return !!document.querySelector( '[data-markdown]' );
+	                    }
+	                },
+	                // Syntax highlight for <code> elements
+	                {
+	                    src: 'plugin/highlight/highlight.js',
+	                    async: true,
+	                    callback: function () {
+	                        hljs.initHighlightingOnLoad();
+	                    }
+	                },
+	                // Zoom in and out with Alt+click
+	                {
+	                    src: 'plugin/zoom-js/zoom.js',
+	                    async: true
+	                },
+	                // Speaker notes
+	                {
+	                    src: 'plugin/notes/notes.js',
+	                    async: true
+	                }
+	        	]
+
+			});
+		</script>
+	</body>
+</html>
